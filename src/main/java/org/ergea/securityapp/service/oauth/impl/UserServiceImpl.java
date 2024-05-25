@@ -175,10 +175,6 @@ public class UserServiceImpl implements UserService {
                 for (Role role : user.getRoles()) {
                     roles.add(role.getName());
                 }
-                //save token
-//                checkUser.setAccessToken(response.getBody().get("access_token").toString());
-//                checkUser.setRefreshToken(response.getBody().get("refresh_token").toString());
-//                userRepository.save(checkUser);
 
                 map.put("access_token", response.getBody().get("access_token"));
                 map.put("token_type", response.getBody().get("token_type"));
