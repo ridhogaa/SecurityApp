@@ -23,6 +23,13 @@ public class Response {
         return map;
     }
 
+    public Map error(Object obj) {
+        Map map = new HashMap();
+        map.put("status", 400);
+        map.put("message", obj);
+        return map;
+    }
+
     public boolean chekNull(Object obj) {
         if (obj == null) {
             return true;

@@ -12,4 +12,16 @@ public class RegisterModel {
     private String password;
     @NotEmpty(message = "fullname is required.")
     private String fullname;
+    public String email;
+
+    public String name;
+
+    public String gender;
+
+    public String domicile;
+
+    public String phone_number;
+
+    public String interest;
+
 }

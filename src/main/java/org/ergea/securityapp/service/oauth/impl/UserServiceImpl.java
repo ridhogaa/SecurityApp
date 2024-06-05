@@ -65,12 +65,8 @@ public class UserServiceImpl implements UserService {
         try {
             String[] roleNames = {"ROLE_USER", "ROLE_READ", "ROLE_WRITE"}; // admin
             User user = new User();
-            user.setUsername(objModel.getUsername().toLowerCase());
+            user.setUsername(objModel.getUsername());
             user.setFullname(objModel.getFullname());
-
-            //step 1 :
-//            user.setEnabled(false); // matikan user
-
             String password = encoder.encode(objModel.getPassword().replaceAll("\\s+", ""));
             List<Role> r = repoRole.findByNameIn(roleNames);
 
